@@ -10,7 +10,7 @@ const ProductDetail = ({ product, onSendProductToCart }) => {
     e.preventDefault();
     onSendProductToCart({
       ...product,
-      quantity: 0,
+      quantity: 1,
     });
   };
 

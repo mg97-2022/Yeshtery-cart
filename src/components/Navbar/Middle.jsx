@@ -19,7 +19,7 @@ const Middle = ({ onShowCart, quantity }) => {
       </div>
       <div className="right">
         <div className="cartIcon" onClick={onShowCart}>
-          <span>{quantity}</span>
+          <span>{quantity ? quantity : 0}</span>
           <BsMinecartLoaded />
           <span>cart</span>
         </div>

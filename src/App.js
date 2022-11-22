@@ -1,36 +1,32 @@
 import React, { useState, Suspense } from "react";
-// import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Products from "./components/Products/Products";
 
 const Cart = React.lazy(() => import("./components/Cart/Cart"));
 
-let newQuantity = 0;
-let cartProduct = {};
+let newQuantity = 0
 
 function App() {
   const [showCart, setShowCart] = useState(false);
+  const [product, setProduct] = useState({});
 
   const showCartHandler = () => {
     setShowCart((prev) => !prev);
   };
 
-  const sendProductToCartHandler = (product) => {
+  const sendProductToCartHandler = (pro) => {
     newQuantity++;
-    cartProduct = {
-      ...product,
-      quantity: newQuantity,
-    };
+    setProduct({...pro, quantity:newQuantity})
   };
 
   return (
     <div className="app">
-      <Navbar onShowCart={showCartHandler} quantity={newQuantity} />
+      <Navbar onShowCart={showCartHandler} quantity={product.quantity} />
       <Products onSendProductToCart={sendProductToCartHandler} />
       <Suspense fallback={<p>loading...</p>}>
         <Cart
-          cartProduct={cartProduct}
+          cartProduct={product}
           onShowCart={showCartHandler}
           showCart={showCart}
         />
