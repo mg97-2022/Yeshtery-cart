@@ -579,7 +579,7 @@ ul {
       border: 1px solid rgb(238, 238, 238);
       position: relative;
       cursor: pointer;
-      min-width: 250px;
+      min-width: 270px;
       max-width: 300px;
       padding: 0.75rem 0.75rem;
       margin-right: 2rem;
@@ -631,24 +631,26 @@ ul {
       .info {
         padding: 0 8px;
         h5 {
-          margin-bottom: 1rem;
+          margin-bottom: 15px;
           font-size: 16px;
           height: 30px;
         }
         .priceLogo {
-          margin-bottom: 12px;
+          margin-bottom: 15px;
           @include display-flex(row, 0, space-between);
           .price {
             height: 52px;
             @include display-flex(column, 0, center);
             align-items: flex-start;
             > span:first-of-type {
-              font-weight: bold;
+              font-weight: 700;
               color: $primary-color;
-              font-size: 1.3rem;
+              font-size: 18px;
+              @media (min-width: 992px) {
+                font-size: 1.3rem;
+              }
               span {
-                font-size: 0.9rem;
-                margin-left: 3px;
+                font-size: 1rem;
               }
             }
             .discount {

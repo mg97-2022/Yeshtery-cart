@@ -30,7 +30,7 @@ const ProductItem = ({ product }) => {
         <div className="priceLogo">
           <div className="price">
             <span>
-              {`${formatNumbers(price)}`}
+              {`${formatNumbers(price)}`}{' '}
               <span>LE</span>
             </span>
             {discount && (
