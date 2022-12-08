@@ -10,7 +10,7 @@ const Bottom = () => {
         <li>kids</li>
         <li>best selless</li>
         <li>new arrivals</li>
-        <li>offers</li>
+        <li className="active">offers</li>
       </ul>
     </nav>
   );

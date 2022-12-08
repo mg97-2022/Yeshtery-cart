@@ -9,13 +9,22 @@ const data = [
       "https://api.yeshtery.com/v1/yeshtery/files/31/ha6542-9-apparel-on-model-detail-view-2-white-d93d4cd72d83496dbcc5beb5c4a89ab8.jpg?height=552",
       "https://api.yeshtery.com/v1/yeshtery/files/31/ha6542-11-apparel-zip-turntable-3d-5-white-acd8b0ba70b4455cb242f70357efc0c8.jpg?height=552",
       "https://api.yeshtery.com/v1/yeshtery/files/31/ha6542-5-apparel-on-model-back-view-white-24c65873ef0b43fd93457a476aac70e0.jpg?height=552",
+      "https://api.yeshtery.com/v1/yeshtery/files/31/ha6542-11-apparel-zip-turntable-3d-8-white-6faadbdfb7594d8c8b0114751ae6cf88.jpg?height=552",
+      "https://api.yeshtery.com/v1/yeshtery/files/31/ha6542-11-apparel-zip-turntable-3d-2-white-0799058e842444a1a411f277d94e9d6f.jpg?height=552",
+      "https://api.yeshtery.com/v1/yeshtery/files/31/ha6542-11-apparel-zip-turntable-3d-3-white-e2ae20d020bd43d0842634044777ea29.jpg?height=552",
+      "https://api.yeshtery.com/v1/yeshtery/files/31/ha6542-8-apparel-on-model-detail-view-1-white-0580be2ce7e045a68679d11a58cd8e91.jpg?height=552",
+      "https://api.yeshtery.com/v1/yeshtery/files/31/ha6542-11-apparel-zip-turntable-3d-6-white-898edc2e1e544c499866e777a1a34094.jpg?height=552",
     ],
-    price: "1199",
+    price: "9999",
     rating: Math.floor(Math.random() * 5 + 1),
     sizes: ["small", "medium", "large", "2xl"],
     category: "men",
     rates: Math.floor(Math.random() * 50 + 1),
     color: "GREY/BLACK",
+    discount: "50",
+    shipping: {
+      location: "Genena Mall",
+    },
   },
 
   {
@@ -28,12 +37,17 @@ const data = [
       "https://api.yeshtery.com/v1/yeshtery/files/31/ha0931-2-apparel-photography-front-center-view-white-d19b9838db8b47da8cffbe473a15a56c.jpg?height=500",
       "https://api.yeshtery.com/v1/yeshtery/files/31/ha0931-9-apparel-zip-turntable-3d-5-white-600f7b3d4ec842a4bd5c347de54b0f02.jpg?height=500",
     ],
-    price: "949",
+    price: "9999",
     rating: Math.floor(Math.random() * 5 + 1),
     sizes: ["2xl", "l", "xl"],
     color: "BLACK",
     category: "men",
     rates: Math.floor(Math.random() * 50 + 1),
+
+    shipping: {
+      location: "UK",
+      duration: 10,
+    },
   },
   {
     id: "p3",
@@ -44,12 +58,16 @@ const data = [
       "https://api.yeshtery.com/v1/yeshtery/files/31/gr0510-9-apparel-zip-turntable-3d-5-white-de5bf6ec448d4a6fae44b0730930e439.jpg?height=552",
       "https://api.yeshtery.com/v1/yeshtery/files/31/gr0510-3-apparel-on-model-standard-view-white-093438d755ba48ea9e3716769978da11.jpg?height=552",
     ],
-    price: "799",
+    price: "9999",
     rating: Math.floor(Math.random() * 5 + 1),
     sizes: ["l", "s"],
     color: " TMROBL/BLACK",
     category: "men",
     rates: Math.floor(Math.random() * 50 + 1),
+    discount: "30",
+    shipping: {
+      location: "Genena Mall",
+    },
   },
   {
     id: "p4",
@@ -61,12 +79,17 @@ const data = [
       "https://api.yeshtery.com/v1/yeshtery/files/31/ha1062-5-apparel-on-model-detail-view-1-white.jpg?height=552",
       "https://api.yeshtery.com/v1/yeshtery/files/31/ha1062-2-apparel-on-model-standard-view-white.jpg?height=552",
     ],
-    price: "919",
+    price: "9999",
     rating: Math.floor(Math.random() * 5 + 1),
     sizes: ["m", "s", "2xl", "xl", "l"],
     color: "NGHBLK",
     category: "men",
     rates: Math.floor(Math.random() * 50 + 1),
+    discount: "70",
+    shipping: {
+      location: "Egypt",
+      duration: 2,
+    },
   },
   {
     id: "p5",
@@ -87,6 +110,9 @@ const data = [
     color: "Ftwwht, Ftwwht, Ftwwht",
     category: "men",
     rates: Math.floor(Math.random() * 50 + 1),
+    shipping: {
+      location: "Genena Mall",
+    },
   },
 ];
 

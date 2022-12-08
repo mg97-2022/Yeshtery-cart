@@ -1,8 +1,14 @@
-import React from "react";
-import { FaStar } from "react-icons/fa";
+import React, { useState, useRef } from "react";
+import { AiFillStar } from "react-icons/ai";
+import { AiOutlineStar } from "react-icons/ai";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+
 import { formatNumbers } from "./ProductItem";
 
 const ProductDetail = ({ product, onSendProductToCart }) => {
+  const [imgIndex, setImgIndex] = useState(0);
+  const carousel = useRef();
   const { rates, category, imgs, logo, title, rating, price, sizes, color } =
     product;
 
@@ -14,14 +20,39 @@ const ProductDetail = ({ product, onSendProductToCart }) => {
     });
   };
 
+  // image handler
+  const previousImgHandler = () => {
+    carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    if (imgIndex - 1 === -1) {
+      setImgIndex(imgs.length - 1);
+      return;
+    }
+    setImgIndex((prev) => prev - 1);
+  };
+  const nextImgHandler = () => {
+    carousel.current.scrollLeft += carousel.current.offsetWidth;
+
+    if (imgIndex + 1 >= imgs.length) {
+      setImgIndex(0);
+      return;
+    }
+    setImgIndex((prev) => prev + 1);
+  };
+
   return (
     <div className="container productDetails">
       <div className="images">
-        <img src={imgs[0]} alt="" />
-        <div className="sliderImages">
-          {imgs.map((img, index) => (
-            <img src={img} alt={title} key={index} />
-          ))}
+        <img src={imgs[imgIndex]} alt="" />
+        <div className="imgsContainer">
+          <div className="controllers">
+            <IoIosArrowBack onClick={previousImgHandler} />
+            <IoIosArrowForward onClick={nextImgHandler} />
+          </div>
+          <div className="sliderImages" ref={carousel}>
+            {imgs.map((img, index) => (
+              <img src={img} alt={title} key={index} />
+            ))}
+          </div>
         </div>
       </div>
       <div className="info">
@@ -33,7 +64,12 @@ const ProductDetail = ({ product, onSendProductToCart }) => {
             {Array(rating)
               .fill()
               .map((_, i) => {
-                return <FaStar key={i} />;
+                return <AiFillStar key={i} />;
+              })}
+            {Array(5 - rating)
+              .fill()
+              .map((_, i) => {
+                return <AiOutlineStar key={Math.random()} />;
               })}
           </div>
           <span>{rating} of 5</span>
@@ -49,7 +85,9 @@ const ProductDetail = ({ product, onSendProductToCart }) => {
           <span>sizes</span>
           <div>
             {sizes.map((size) => (
-              <span key={size}>{size}</span>
+              <span className={size === "large" ? "active" : ""} key={size}>
+                {size}
+              </span>
             ))}
           </div>
         </div>
@@ -60,7 +98,9 @@ const ProductDetail = ({ product, onSendProductToCart }) => {
         <form onSubmit={formSubmitHandler}>
           <span>quantity</span>
           <div className="input">
-            <button type="button">-</button>
+            <button type="button">
+              <span>_</span>
+            </button>
             <input type="number" defaultValue="1" min="1" step="1" />
             <button type="button">+</button>
           </div>
