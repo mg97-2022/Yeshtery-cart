@@ -521,7 +521,7 @@ ul {
       cursor: pointer;
       min-width: 200px;
       max-width: 300px;
-      padding: 0.5rem 0.5rem 10px;
+      padding: 0.5rem 0.75rem 10px;
       margin-right: 2rem;
       border-radius: 0.5rem;
       -webkit-border-radius: 0.5rem;
@@ -541,8 +541,8 @@ ul {
           -o-border-radius: 0.5rem;
         }
         h5 {
-          margin-bottom: 0.5rem;
-          height: 50px;
+          margin-bottom: 1rem;
+          font-size: 1rem;
         }
       }
       .priceLogo {
@@ -639,7 +639,10 @@ ul {
       flex: 2;
       p {
         font-weight: 600;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+        @media (min-width: 992px) {
+          font-size: 1.25rem;
+        }
         + span {
           display: inline-block;
           font-weight: 600;
@@ -800,7 +803,7 @@ ul {
           li {
             text-transform: capitalize;
             margin-bottom: 1rem;
-            font-weight: 500;
+            font-weight: 600;
           }
         }
         ul:last-of-type {
