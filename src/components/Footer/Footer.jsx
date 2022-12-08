@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="bottom">
-          <p>$copy; 2021 yeshtery, all rights reserved</p>
+          <p>&copy; 2021 yeshtery, all rights reserved</p>
           <div className="cash">
             <img
               src="https://yeshtery.com/yeshtery/images/cash.png"

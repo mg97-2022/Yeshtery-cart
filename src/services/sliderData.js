@@ -12,9 +12,10 @@ const data = [
     ],
     price: "1199",
     rating: Math.floor(Math.random() * 5 + 1),
-    sizes: ["2xl"],
+    sizes: ["small", "medium", "large", "2xl"],
     category: "men",
     rates: Math.floor(Math.random() * 50 + 1),
+    color: "GREY/BLACK",
   },
 
   {

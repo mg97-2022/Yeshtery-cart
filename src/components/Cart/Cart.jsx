@@ -7,7 +7,7 @@ const Cart = ({ cartProduct, showCart, onShowCart }) => {
   if (cartProduct.quantity === undefined) {
     content = (
       <>
-        <p className="emptyCart">Empty cart! let's buy something</p>
+        <p className="emptyCart">Empty cart! let's buy something...</p>
         <div className="total">
           <span>
             total: 0<span>LE</span>
