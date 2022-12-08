@@ -60,9 +60,9 @@ const ProductDetail = ({ product, onSendProductToCart }) => {
         <form onSubmit={formSubmitHandler}>
           <span>quantity</span>
           <div className="input">
-            <button>-</button>
+            <button type="button">-</button>
             <input type="number" defaultValue="1" min="1" step="1" />
-            <button>+</button>
+            <button type="button">+</button>
           </div>
           <div className="btns">
             <button type="submit">add to cart</button>

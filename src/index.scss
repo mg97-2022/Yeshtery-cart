@@ -497,9 +497,19 @@ ul {
     }
     ::-webkit-scrollbar-track {
       background-color: rgb(145, 145, 145);
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
     }
     ::-webkit-scrollbar-thumb {
       background-color: $primary-color;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
     }
   }
   .list {
@@ -570,8 +580,8 @@ ul {
 // end products part
 // start cart
 .cart {
-  position: absolute;
-  padding: 2rem 1rem;
+  position: fixed;
+  padding: 1rem 1rem;
   top: 0;
   right: 0;
   width: 400px;
@@ -602,7 +612,7 @@ ul {
   }
   h3 {
     text-align: center;
-    padding: 3rem 0;
+    padding: 2rem 0;
     text-transform: capitalize;
     color: $primary-color;
     font-weight: 700;
@@ -612,7 +622,7 @@ ul {
       text-transform: capitalize;
       font-weight: 700;
       font-size: 1.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
   .cartItem {
@@ -628,12 +638,12 @@ ul {
     .info {
       flex: 2;
       p {
-        font-weight: 700;
+        font-weight: 600;
         font-size: 1.25rem;
         + span {
           display: inline-block;
           font-weight: 600;
-          font-size: 0.9rem;
+          font-size: 12px;
           margin: 0.5rem 0;
         }
       }
@@ -727,7 +737,7 @@ ul {
       }
       p {
         margin-bottom: 1rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
     }
     .left {
@@ -790,6 +800,7 @@ ul {
           li {
             text-transform: capitalize;
             margin-bottom: 1rem;
+            font-weight: 500;
           }
         }
         ul:last-of-type {
@@ -799,6 +810,7 @@ ul {
             display: flex;
             align-items: center;
             margin-bottom: 1rem;
+            font-weight: 500;
             img {
               width: 30px;
               margin-right: 0.5rem;
