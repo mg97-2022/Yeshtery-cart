@@ -50,7 +50,12 @@ const ProductDetail = ({ product, onSendProductToCart }) => {
           </div>
           <div className="sliderImages" ref={carousel}>
             {imgs.map((img, index) => (
-              <img src={img} alt={title} key={index} />
+              <img
+                src={img}
+                alt={title}
+                key={index}
+                onClick={() => setImgIndex(index)}
+              />
             ))}
           </div>
         </div>
@@ -77,7 +82,7 @@ const ProductDetail = ({ product, onSendProductToCart }) => {
         </div>
         <div className="price">
           <span>
-            {`${formatNumbers(price)}`}
+            {`${formatNumbers(price)}`}{' '}
             <span>LE</span>
           </span>
         </div>

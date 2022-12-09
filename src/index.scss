@@ -354,12 +354,16 @@ ul {
         width: 100px;
       }
       h3 {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        @media (min-width: 992px) {
+          font-size: 1.5rem;
+        }
         margin: 0.5rem 0;
         + span {
           color: $third-color;
           text-transform: capitalize;
-          font-weight: bold;
+          font-weight: 600;
+          font-size: 16px;
         }
       }
     }
@@ -385,6 +389,7 @@ ul {
       .stars {
         font-weight: 700;
         svg {
+          font-size: 20px;
           margin: 1px;
           color: rgb(255, 166, 0);
         }
@@ -392,10 +397,12 @@ ul {
       span:first-of-type {
         color: black;
         font-weight: 700;
+        font-size: 14px;
       }
       span:last-of-type {
         color: $third-color;
         font-weight: 600;
+        font-size: 14px;
       }
     }
     .price {
@@ -404,8 +411,7 @@ ul {
         font-weight: bold;
         color: $primary-color;
         span {
-          font-size: 0.8rem;
-          margin-left: 3px;
+          font-size: 1rem;
         }
       }
     }
